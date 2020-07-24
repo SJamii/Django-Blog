@@ -1,0 +1,20 @@
+{% extends 'new_blog/base.html' %}
+{% block title%}Category Detail{% endblock %}
+{% block content %}
+<h1>Details</h1>
+<hr>
+{% for ll in cat_po %}
+<div class="col-md-8">
+    <div class="card">
+        <img src="{{ ll.image.url }}" alt=""class="card-img-top">
+        <div class="card-body">
+            <h5>{{ ll.title }}</h5>
+            <p>Created At: {{ ll.created_at }}, Updated At: {{ ll.updated_at }}</p>
+            <hr>
+            <p>{{ ll.description}}</p>
+        </div>
+    </div>
+</div>
+<hr>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% block title %}List of Blog post{% endblock %}
+{% block content %}
+<hr>
+<h1 style="color: #030100;">This is the list of Blog Post</h1>
+<br>
+{% for list in post %}
+<br>
+<img style="width:30%" src="{{ list.image.url }}">
+<p style="color: #030100;"><b>{{ list.title }}</b></p>
+<p><a href="{% url 'post-details' list.id %}" style="color:blue;">read more</a></p>
+<a href="{% url 'post-delete' list.id %}">Delete Post</a>
+<hr>
+{% endfor %}
+{% endblock %}

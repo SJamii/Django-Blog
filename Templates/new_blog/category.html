@@ -1,0 +1,13 @@
+{% extends 'new_blog/base.html' %}
+{% block title%}Category{% endblock %}
+{% block content %}
+<h1>Categories are:</h1>
+<hr>
+<a>
+    {% for catt in cat_list %}
+    <li><a href="{% url 'cat-detail' catt.name %}">{{ catt.name }}</a></li>
+    {% endfor %}
+</ul>
+    <br>
+    <p><a href="{% url 'add-category' %}">Add Category</a></p>
+{% endblock %}
