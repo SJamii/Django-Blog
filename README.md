@@ -1,1 +1,1 @@
-# Django-Blog
+# This blog is developed by using Django Framework
